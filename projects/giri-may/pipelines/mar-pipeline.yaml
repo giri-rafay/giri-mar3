@@ -4,6 +4,7 @@ metadata:
   name: mar-pipeline
   project: giri-may
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
