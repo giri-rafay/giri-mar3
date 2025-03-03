@@ -3,8 +3,4 @@ kind: OPAProfile
 metadata:
   name: fdfdf
   project: giri-may
-spec:
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
+spec: {}

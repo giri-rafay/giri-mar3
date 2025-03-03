@@ -13,6 +13,10 @@ spec:
     auditInterval: 60
     constraintViolationsLimit: 20
   opaVersion: 3.16.3
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
   syncObjects:
   - group: f
     kind: fdf
