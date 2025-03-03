@@ -3,8 +3,4 @@ kind: ClusterNetworkPolicy
 metadata:
   name: host-network
   project: giri-may
-spec:
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
+spec: {}
