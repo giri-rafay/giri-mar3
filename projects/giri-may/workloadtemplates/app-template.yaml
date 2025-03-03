@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: app-template
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/app-template/http-sw-app-fail.yaml
+    options: {}
+    type: Yaml

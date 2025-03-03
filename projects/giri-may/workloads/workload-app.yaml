@@ -11,5 +11,5 @@ spec:
     type: Yaml
   namespace: workload-ns
   placement:
-    selector: rafay.dev/clusterName=giri-feb24-qc
-  version: workload-app-v3-202502241150200000
+    selector: rafay.dev/clusterName=giri-mar3-mks1
+  version: workload-app-v5-202503031139400000
