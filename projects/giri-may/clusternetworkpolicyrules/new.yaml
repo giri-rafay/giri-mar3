@@ -10,8 +10,4 @@ spec:
       - name: file://artifacts/new/cluster-wide.yaml
     options: {}
     type: Yaml
-  sharing:
-    enabled: true
-    projects:
-    - name: '*'
   version: v3
