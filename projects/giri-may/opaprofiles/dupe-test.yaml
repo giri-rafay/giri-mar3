@@ -1,0 +1,20 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: dupe-test
+  project: giri-may
+spec:
+  excludedNamespaces:
+  - namespaces:
+    - name: swagger-ns
+    processes:
+    - sync
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.16.3
+  syncObjects:
+  - group: rere
+    kind: dffd
+    version: dfd
+  version: space

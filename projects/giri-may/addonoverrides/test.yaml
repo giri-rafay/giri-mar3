@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: test
+  project: giri-may
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-feb11-qc1
+  resource:
+    selector:
+      name: addon-xwing
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://test/test.yaml

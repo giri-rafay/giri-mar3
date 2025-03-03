@@ -1,0 +1,11 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: ankit-test
+  project: giri-may
+spec:
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.16.3
+  version: v1

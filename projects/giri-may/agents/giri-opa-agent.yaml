@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: giri-opa-agent
+  project: giri-may
+spec:
+  active: true
+  cluster:
+    name: giri-dec23
+  type: Cluster
+  version: r2.12.0

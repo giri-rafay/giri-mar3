@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: giri-mks
+  project: giri-may
+spec:
+  active: true
+  cluster:
+    name: giri-mar3-mks1
+  type: Cluster
+  version: r3.2.0

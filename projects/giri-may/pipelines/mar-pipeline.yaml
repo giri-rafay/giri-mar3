@@ -1,0 +1,50 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: mar-pipeline
+  project: giri-may
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: WorkloadTemplate
+      - name: Addon
+      - name: AddonOverride
+      - name: Blueprint
+      - name: Override
+      - name: Catalog
+      - name: ClusterNetworkPolicy
+      - name: ClusterNetworkPolicyRule
+      - name: NamespaceNetworkPolicy
+      - name: Namespace
+      - name: NamespaceNetworkPolicyRule
+      - name: Agent
+      - name: NetworkPolicyProfile
+      - name: SecretProviderClass
+      - name: OPAConstraintTemplate
+      - name: OPAPolicy
+      - name: Repository
+      - name: SecretSealer
+      - name: OPAProfile
+      - name: OPAConstraint
+      - name: Pipeline
+      - name: Workload
+      - name: SecretStore
+      - name: CostProfile
+      sourceAsDestination: true
+      sourceRepo:
+        repository: giri-mar
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: giri-mar
+        revision: main
+    name: test
+    type: Webhook

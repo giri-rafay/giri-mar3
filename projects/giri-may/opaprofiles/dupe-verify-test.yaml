@@ -1,0 +1,20 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: dupe-verify-test
+  project: giri-may
+spec:
+  excludedNamespaces:
+  - namespaces:
+    - name: calico-system
+    processes:
+    - webhook
+  installationParams:
+    auditInterval: 60
+    constraintViolationsLimit: 20
+  opaVersion: 3.16.3
+  syncObjects:
+  - group: f
+    kind: fdf
+    version: fd
+  version: v1

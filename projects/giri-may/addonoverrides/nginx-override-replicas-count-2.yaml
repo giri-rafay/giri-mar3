@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: nginx-override-replicas-count-2
+  project: giri-may
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-aug5-qc
+  resource:
+    selector:
+      name: xwing-addon
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://nginx-override-replicas-count-2/nginx-override-replicas-count-2.yaml

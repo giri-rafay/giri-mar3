@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-mar
+  project: giri-may
+spec:
+  agents:
+  - name: giri-mks
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-mar3.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/giri-mar/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: 27xrqnk
+    name: giri-mks
+  projects:
+  - projectId: kno93l2
+    repositoryId: ko4l942
+  webhookConfig:
+    webhookSecret: 43b939c30a8d528741716f023da360912bf9befd8e8ce76398e66bb370b23977
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/ko4l942

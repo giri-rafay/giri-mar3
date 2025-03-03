@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: nginx
+  project: giri-may
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/projectName
+      value: giri-may
+  resource:
+    selector:
+      name: xwing-addon
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://nginx/nginx.yaml

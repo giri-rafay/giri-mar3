@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-opa
+  project: giri-may
+spec:
+  agents:
+  - name: giri-opa-agent
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-opa-bp.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/giri-opa/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: kgxjjjm
+    name: giri-opa-agent
+  projects:
+  - projectId: kno93l2
+    repositoryId: 2w05x6m
+  webhookConfig:
+    webhookSecret: 45916000ee05a2c55293d4354e8c177a063b5f55eacaed79212ce09b39cb2c73
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/2w05x6m

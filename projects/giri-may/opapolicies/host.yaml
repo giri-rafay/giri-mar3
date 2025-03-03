@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: host
+  project: giri-may
+spec:
+  constraintList:
+  - name: host-network-ports
+    version: version-1736317698
+  version: v1

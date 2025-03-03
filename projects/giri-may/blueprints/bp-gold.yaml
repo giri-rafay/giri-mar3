@@ -1,0 +1,52 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-gold
+  project: giri-may
+spec:
+  base:
+    name: default-aks
+    version: 3.2.0
+  componentsCriticality:
+  - name: opa-policy
+  - name: cost-profile
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1740765032
+  customAddons:
+  - name: metallb-config
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator: {}
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: new
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: requiredlabels
+      version: v1
+    profile:
+      name: default
+      version: latest
+  type: golden
+  version: v1-gold
+  versionState: active

@@ -1,0 +1,11 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretProviderClass
+metadata:
+  name: giri
+  project: giri-may
+spec:
+  provider: AWS
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
