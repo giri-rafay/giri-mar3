@@ -6,4 +6,8 @@ metadata:
 spec:
   autoSync: true
   repository: default-stable-helm
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
   type: HelmRepository
