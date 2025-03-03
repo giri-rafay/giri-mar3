@@ -5,8 +5,8 @@ metadata:
   project: giri-may
 spec:
   base:
-    name: bp-gold
-    version: v1-gold
+    name: default
+    version: 3.2.0
   componentsCriticality:
   - name: addon-xwing
   customAddons:
@@ -17,18 +17,8 @@ spec:
     enableMonitoring: true
     monitoring:
       gpuOperator: {}
-      metricsServer:
-        customizationEnabled: true
-      prometheusAdapter:
-        customizationEnabled: true
-  drift:
-    action: Deny
-    enabled: true
   driftWebhook:
     enabled: true
-  namespaceConfig:
-    enableSync: true
-    syncType: Unmanaged
   type: custom
-  version: v1-custom
+  version: bp-default
   versionState: active
