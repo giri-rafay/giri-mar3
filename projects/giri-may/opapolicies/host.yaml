@@ -7,4 +7,8 @@ spec:
   constraintList:
   - name: host-network-ports
     version: version-1736317698
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'
   version: v1
