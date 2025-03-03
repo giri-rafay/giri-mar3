@@ -14,5 +14,7 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-feb24-qc
+    - key: rafay.dev/clusterName
+      value: giri-mar3-mks1
   resourceQuotas:
     pods: "4"
